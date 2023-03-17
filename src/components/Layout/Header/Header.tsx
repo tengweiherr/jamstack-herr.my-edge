@@ -103,13 +103,13 @@ const Header = ({resume}:HeaderProps) => {
                                 <Logo />
                             </Link>
                             <NavItem>
-                                <Link className="nav-link" href={BEHANCE_LINK} target="_blank" aria-label="HERR Studio">HERR Studio</Link>
+                                <Link className="nav-link" href={BEHANCE_LINK} target="_blank" rel="noreferrer" aria-label="HERR Studio">HERR Studio</Link>
                             </NavItem>
                             <NavItem>
-                                <Link className="nav-link" href={`mailto:${EMAIL_LINK}`} target="_blank" aria-label="Contact">Contact</Link>
+                                <Link className="nav-link" href={`mailto:${EMAIL_LINK}`} target="_blank" rel="noreferrer" aria-label="Contact">Contact</Link>
                             </NavItem>
                             <NavItem className="resume">
-                                <Button className="nav-link button resume cyan mx-auto" href={RESUME_LINK} target="_blank" aria-label="Resume">Resume</Button>
+                                <Button className="nav-link button resume cyan mx-auto" href={RESUME_LINK} target="_blank" rel="noreferrer" aria-label="Resume">Resume</Button>
                             </NavItem>
                         </NavbarItemList>
                     </NavbarCollapse>

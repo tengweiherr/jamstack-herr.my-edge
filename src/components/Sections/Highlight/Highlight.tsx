@@ -61,7 +61,7 @@ const Highlight = ({projects}:HighlightProps) => {
                   }
                   <HighlightImgContainer>
                       <HoverIconContainer>
-                        <Link href={item.githubLink} target="_blank" aria-label="Github">
+                        <Link href={item.githubLink} target="_blank" rel="noreferrer" aria-label="Github">
                           <Image src={ICON.github} alt="Github" width={20} height={20} />
                         </Link>
                       </HoverIconContainer>
@@ -76,9 +76,9 @@ const Highlight = ({projects}:HighlightProps) => {
                     <p className="description" dangerouslySetInnerHTML={{__html:item.description}}></p>
                     <ButtonContainer>
                       {item.projectLink && 
-                        <Button href={item.projectLink} target="_blank" aria-label="ProjectLink" className="cyan read-more">Visit project</Button>
+                        <Button href={item.projectLink} target="_blank" rel="noreferrer" aria-label="ProjectLink" className="cyan read-more">Visit project</Button>
                       }
-                      <Button href={item.githubLink} target="_blank" aria-label="Github" className="cyan read-more">Read more on Github</Button>
+                      <Button href={item.githubLink} target="_blank" rel="noreferrer" aria-label="Github" className="cyan read-more">Read more on Github</Button>
                     </ButtonContainer>
                   </SlideInner>
                 </Slide>

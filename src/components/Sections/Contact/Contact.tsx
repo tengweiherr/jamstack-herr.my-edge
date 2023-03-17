@@ -48,11 +48,11 @@ const Contact = () => {
                 </TextContainer>
                 <Button href="mailto:herrartwork@gmail.com" className="button text-center cyan mt-2" aria-label="Contact">Say Hello</Button>
                 <div className="social-media-icon row d-flex flex-row justify-content-between align-items-center mt-4">
-                    <a href="https://www.linkedin.com/in/teng-wei-herr-15a7891a9/" target="_blank" aria-label="LinkedIn"><Image src={ICON.linkedIn} alt="LinkedIn" width={20} height={20}/></a>
-                    <a href="https://github.com/tengweiherr" target="_blank" aria-label="Github"><Image src={ICON.github} alt="Github" width={20} height={20} /></a>
-                    <a href="https://www.behance.net/herrstudio" target="_blank" aria-label="Behance"><Image src={ICON.behance} alt="Behance" width={20} height={20}/></a>
-                    <a href="https://www.facebook.com/weiherrteng" target="_blank" aria-label="Facebook"><Image src={ICON.facebook} alt="Facebook" width={20} height={20} /></a>
-                    <a href="https://www.instagram.com/herr_studio/" target="_blank" aria-label="Instagram"><Image src={ICON.instagram} alt="Instagram" width={20} height={20}/></a>
+                    <a href="https://www.linkedin.com/in/teng-wei-herr-15a7891a9/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Image src={ICON.linkedIn} alt="LinkedIn" width={20} height={20}/></a>
+                    <a href="https://github.com/tengweiherr" target="_blank" rel="noreferrer" aria-label="Github"><Image src={ICON.github} alt="Github" width={20} height={20} /></a>
+                    <a href="https://www.behance.net/herrstudio" target="_blank" rel="noreferrer" aria-label="Behance"><Image src={ICON.behance} alt="Behance" width={20} height={20}/></a>
+                    <a href="https://www.facebook.com/weiherrteng" target="_blank" rel="noreferrer" aria-label="Facebook"><Image src={ICON.facebook} alt="Facebook" width={20} height={20} /></a>
+                    <a href="https://www.instagram.com/herr_studio/" target="_blank" rel="noreferrer" aria-label="Instagram"><Image src={ICON.instagram} alt="Instagram" width={20} height={20}/></a>
                 </div>
                 </div>
             </div>
