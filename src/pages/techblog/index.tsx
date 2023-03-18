@@ -4,7 +4,7 @@ import { PageSubtitle, PageTitle, Section, TextContainer } from "@/utils/styled/
 import { NextConfig } from "next"
 import dynamic from "next/dynamic"
 
-export const config:NextConfig = { runtime: 'nodejs' }
+export const config:NextConfig = { runtime: 'edge' }
 
 type TechblogProps = {
     mediumRSSResInString: string

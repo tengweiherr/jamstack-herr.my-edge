@@ -9,7 +9,7 @@ import More from '@/components/Sections/More'
 import Contact from '@/components/Sections/Contact'
 import { NextConfig } from 'next'
 
-export const config:NextConfig = { runtime: 'nodejs' }
+export const config:NextConfig = { runtime: 'edge' }
 
 type HomeProps = {
   projects: Array<Project>
