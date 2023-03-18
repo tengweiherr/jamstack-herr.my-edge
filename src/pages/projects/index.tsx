@@ -2,14 +2,14 @@ import Loading from "@/components/Molecules/Loading"
 import { fetchAllProjects } from "@/utils/api/contentful"
 import { PageSubtitle, PageTitle, Section, TextContainer } from "@/utils/styled/common.styled"
 import { Project } from "@/utils/types"
-import { GetServerSidePropsContext } from "next"
 import dynamic from "next/dynamic"
 
 type ProjectsProps = {
     projectsFromAPI: Array<Project>
 }
 
-export async function getServerSideProps({ req, res }:GetServerSidePropsContext) {
+export async function getStaticProps() {
+
     const projectsFromAPI = await fetchAllProjects()
   
     return {

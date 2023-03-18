@@ -7,7 +7,6 @@ import { Experience as Exp, ExpExtraProps, MyData, MyDataSkills, Project } from 
 import Experience from '@/components/Sections/Experience'
 import More from '@/components/Sections/More'
 import Contact from '@/components/Sections/Contact'
-import { GetServerSidePropsContext } from 'next'
 
 type HomeProps = {
   projects: Array<Project>
@@ -52,7 +51,7 @@ const getTimeDifference = (firstDate:string, secondDate:string) => {
 }
 
 // This function gets called at build time
-export async function getServerSideProps({ req, res }:GetServerSidePropsContext) {
+export async function getStaticProps() {
 
   const [projects, myData, exps] = await Promise.all(
   [
