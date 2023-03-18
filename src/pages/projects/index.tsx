@@ -2,7 +2,10 @@ import Loading from "@/components/Molecules/Loading"
 import { fetchAllProjects } from "@/utils/api/contentful"
 import { PageSubtitle, PageTitle, Section, TextContainer } from "@/utils/styled/common.styled"
 import { Project } from "@/utils/types"
+import { NextConfig } from "next"
 import dynamic from "next/dynamic"
+
+export const config:NextConfig = { runtime: 'nodejs' }
 
 type ProjectsProps = {
     projectsFromAPI: Array<Project>

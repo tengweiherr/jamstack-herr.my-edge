@@ -7,6 +7,9 @@ import { Experience as Exp, ExpExtraProps, MyData, MyDataSkills, Project } from 
 import Experience from '@/components/Sections/Experience'
 import More from '@/components/Sections/More'
 import Contact from '@/components/Sections/Contact'
+import { NextConfig } from 'next'
+
+export const config:NextConfig = { runtime: 'nodejs' }
 
 type HomeProps = {
   projects: Array<Project>
