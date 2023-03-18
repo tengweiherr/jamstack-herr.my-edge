@@ -1,16 +1,14 @@
 import Loading from "@/components/Molecules/Loading"
 import { fetchAllStories } from "@/utils/api/medium"
 import { PageSubtitle, PageTitle, Section, TextContainer } from "@/utils/styled/common.styled"
-import { NextConfig } from "next"
+import { GetServerSidePropsContext } from "next"
 import dynamic from "next/dynamic"
-
-export const config:NextConfig = { runtime: 'edge' }
 
 type TechblogProps = {
     mediumRSSResInString: string
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps({ req, res }:GetServerSidePropsContext) {
 
     const mediumRSSResInString = await fetchAllStories()
   
