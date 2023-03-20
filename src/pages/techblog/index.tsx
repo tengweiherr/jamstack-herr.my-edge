@@ -14,8 +14,7 @@ export async function getStaticProps() {
     return {
       props: {
         mediumRSSResInString
-      },
-      revalidate: 3628800
+      }
     }
 }
 
