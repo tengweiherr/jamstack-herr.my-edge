@@ -1,6 +1,6 @@
 import { fetchExp, fetchHighlightedProjects, fetchMyData } from '@/utils/api/contentful'
 import Banner from '@/components/Sections/Banner'
-import Quote1 from '@/components/Sections/Quote'
+import Quote from '@/components/Sections/Quote'
 import Highlight from '@/components/Sections/Highlight'
 import Introduction from '@/components/Sections/Introduction'
 import { Experience as Exp, ExpExtraProps, MyData, MyDataSkills, Project } from '@/utils/types'
@@ -134,7 +134,7 @@ export default function Home({projects,myData,myDataParagraphs,myDataSkills,exps
   return (
     <>
       <Banner />
-      <Quote1 />
+      <Quote />
       <Highlight projects={projects} />
       <Introduction myData={myData} myDataParagraphs={myDataParagraphs} myDataSkills={myDataSkills}/>
       <Experience exps={exps} />
