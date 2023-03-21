@@ -53,10 +53,10 @@ const getTimeDifference = (firstDate:string, secondDate:string) => {
 // This function gets called at build time
 export async function getStaticProps() {
 
-  const [projects, myData, exps] = await Promise.all(
+  const [projects,exps] = await Promise.all(
   [
     fetchHighlightedProjects(),
-    fetchMyData(),
+    // fetchMyData(),
     fetchExp(),
   ],
 )
@@ -71,29 +71,29 @@ export async function getStaticProps() {
   }
 
   //myData clean up
-  let myDataParagraphs = []
-  let myDataSkills = {
-    part_1: [],
-    part_2: []
-  }
+  // let myDataParagraphs = []
+  // let myDataSkills = {
+  //   part_1: [],
+  //   part_2: []
+  // }
 
-  if(myData){
-    const paraArray = [myData.paragraph1]
-    if(myData.paragraph2) paraArray.push(myData.paragraph2)
-    if(myData.paragraph3) paraArray.push(myData.paragraph3)
+  // if(myData){
+  //   const paraArray = [myData.paragraph1]
+  //   if(myData.paragraph2) paraArray.push(myData.paragraph2)
+  //   if(myData.paragraph3) paraArray.push(myData.paragraph3)
 
-    myDataParagraphs = paraArray
+  //   myDataParagraphs = paraArray
 
-    if(myData.techStack){
-        const middleIndex = Math.ceil(myData.techStack?.length / 2);
-        const firstHalf = myData.techStack.slice().splice(0, middleIndex);   
-        const secondHalf = myData.techStack.slice().splice(-middleIndex);
-        myDataSkills = {
-            part_1: firstHalf,
-            part_2: secondHalf
-        }
-    }
-  }
+  //   if(myData.techStack){
+  //       const middleIndex = Math.ceil(myData.techStack?.length / 2);
+  //       const firstHalf = myData.techStack.slice().splice(0, middleIndex);   
+  //       const secondHalf = myData.techStack.slice().splice(-middleIndex);
+  //       myDataSkills = {
+  //           part_1: firstHalf,
+  //           part_2: secondHalf
+  //       }
+  //   }
+  // }
 
   let expsToModify:Array<Exp & ExpExtraProps> = []
   //exp data clean up
@@ -121,22 +121,22 @@ export async function getStaticProps() {
   return {
     props: {
       projects,
-      myData,
-      myDataParagraphs,
-      myDataSkills,
+      // myData,
+      // myDataParagraphs,
+      // myDataSkills,
       exps: expsToModify
     }
   }
 }
 
-export default function Home({projects,myData,myDataParagraphs,myDataSkills,exps}:HomeProps) {
+export default function Home({projects,exps}:HomeProps) {
 
   return (
     <>
       <Banner />
       <Quote />
       <Highlight projects={projects} />
-      <Introduction myData={myData} myDataParagraphs={myDataParagraphs} myDataSkills={myDataSkills}/>
+      {/* <Introduction myData={myData} myDataParagraphs={myDataParagraphs} myDataSkills={myDataSkills}/> */}
       <Experience exps={exps} />
       <More />
       <Contact />
